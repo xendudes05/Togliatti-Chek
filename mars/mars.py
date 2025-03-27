@@ -23,6 +23,41 @@ def promotion():
     return '</br>'.join(fr)
 
 
+@app.route('/bootstrap_sample')
+def bootstrap():
+    return '''<!doctype html>
+                <html lang="en">
+                  <head>
+                    <meta charset="utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+                    <link rel="stylesheet" 
+                    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+                    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+                    crossorigin="anonymous">
+                    <title>Колонизация</title>
+                     <h1 class="text-danger">Жди нас, Марс!</h1>
+                    <img src="{url_for('static', filename='MARS.png')}" 
+                  </head>
+                  <body>
+                    <div class="alert alert-secondary" role="alert">
+                      A simple primary alert—check it out!
+                    </div>
+                    <div class="alert alert-success" role="alert">
+                      A simple secondary alert—check it out!
+                    </div>
+                    <div class="alert alert-secondary" role="alert">
+                      A simple success alert—check it out!
+                    </div>
+                    <div class="alert alert-warning" role="alert">
+                      A simple danger alert—check it out!
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                      A simple warning alert—check it out!
+                    </div>
+                  </body>
+                </html>'''
+
+
 @app.route('/image_mars')
 def image():
     return f"""<!doctype html>
@@ -34,7 +69,7 @@ def image():
                   </head>
                   <body>
                     <h1>Жди нас, Марс!</h1>
-                    <img src="{url_for('static', filename='MARS.png')}" 
+                    <img src="{url_for('static', filename='MARS.PNG')}" 
            alt="здесь должна была быть картинка, но не нашлась">
                   </body>
                 </html>"""
